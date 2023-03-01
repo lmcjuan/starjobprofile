@@ -2,11 +2,8 @@ let index = 0;
 let attempt = 0;
 var pila=[];
 var rs=[];
-let D=0;
-let Y=0;
-let S=0;
-let C=0;
 let F="";
+let t="";
 let time=[];
 let questions = test.sort(function()
 {
@@ -213,6 +210,10 @@ const renderDISC = () =>
     
 }
 // ######################### Operaciones ###############################
+let D=0;
+let Y=0;
+let S=0;
+let C=0;
 function diferencia()
 {
     var contador=0;
@@ -337,7 +338,7 @@ async function Txt()
 {
     index++;
     diferencia();
-    let t=Profile ();
+    t=Profile ();
     console.log("Resultdo de concatenacion "+t);
     F=printprofile(t);
     console.log("Resultdo de buscador "+ F);
