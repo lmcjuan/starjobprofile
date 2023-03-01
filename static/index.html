@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarJobProfile</title>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="77px" height="53">
+
+                <li><a href="/">Inicio</a> <!-- a etiqueta de anclaje--></li>
+                <li><a href="#CBeta">Contacto</a></li>
+                <li><a href="#AbautBeta">Acerca de</a></li>
+                <!-- Elementos alineados a la derecha -->
+                <a href="#LoginBeta"><div class="log_in"><img src="/static/Images/ico-usr.png">Iniciar</div></a>
+                <li class="dropdownIcon">
+                    <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+                </li>
+           </ul>
+        </nav>
+            <div class="container" id="star" >
+            <div class="rightSide">
+                <h3>Star Job Profile</h3>
+                <h1>Prueba DISC en línea</h1>
+                <h2>Conoce tu perfil laboral</h2>
+                <a onclick="ShowSteps()">Comenzar prueba DISC</a>
+            </div>
+            <div class="leftSide"><img src="/static/Images/image.png"></div>
+            </div>
+            <div class="starsteps" id="steps"style="display: none;">
+                <h1>Aviso importante</h1>
+                <p>Es importante tomar en cuenta que ningún resultado es bueno ni malo, aunque la nota 
+                    sea alta o baja; los resultados de esta prueba indican si la persona tiene lo necesario
+                    para desenvolverse efectivamente en un puesto o profesión.
+                    Es de vital importancia contestar con calma y meditar cada una de las secciones.
+                </p>
+                    
+                <h2>Instrucciones</h2>
+                <br>
+                <p>El cuestionario se divide en dos etapas.</p>
+                    
+                    <h2>Uno</h2>La prueba de personalidad DISC, la cual consta de 24 secciones. En cada una se
+                    presenta una serie de palabras que describen a las personas, agrupadas en
+                    cuatro.
+                    De estas cuatro deberá de escoger dos siempre en el mismo orden: una de ellas
+                    que será la palabra que mejor lo describa y la otra la que menos lo describa de las cuatro 
+                 <h3> Ejemplo:</h3>
+                <div class="steps">
+                    <img src="/static/Images/StepDesk.png">
+                </div>
+                    <h2>Dos</h2> 
+                    <p>
+                    Autodescripción de usted mismo, consta de un breve párrafo el cual deberá plasmar sus fortalezas y debilidades en el trabajo.
+                </p>
+                <br><br><br>
+                <div class="iniciar" id="buttons" style="display: none;"><a onclick="Back()">En otro momento</a> <a href="/Test/">Comenzar ahora</a> </div>
+            </div>
+            
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="/static/index.js"></script>
+    </body>
+</html>

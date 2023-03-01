@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobProfile</title>
+    <link rel="stylesheet" href="/static/Test/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+            <img src="/static/Images/logo.png" style="margin-left: 80px;" width="77px" height="53">
+            <li><a href="/">Inicio</a> <!-- a etiqueta de anclaje--></li>
+            <li><a href="#CBeta">Contacto</a></li>
+            <li><a href="#AbautBeta">Acerca de</a></li>
+            <!-- Elementos alineados a la derecha -->
+            <a href="#LoginBeta"><div class="log_in"><img src="/static/Images/ico-usr.png">Iniciar</div></a>
+            <li class="dropdownIcon">
+                <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+            </li>
+       </ul>
+    </nav>
+     <div class="box" id="questionScreen">
+        <div class="title">
+            Paso 1 Test de personalidad
+        </div>
+        <div class="header">
+            <div class="scoreBox">Sección <span></span></div>
+            <div class="timerBox">Tiempo <span>0 : 0 </span></div>
+        </div>
+    
+        <div class="questionBox">Elija la palabra que más lo represente y después seleccione una que menos lo represente.<br>
+            ¿No conoce alguna palabra?
+            <div class="Example">toque este símbolo<div class="description">i</div></div>
+            
+        </div>
+        
+        <div class="optionBox">
+            <div class="opbutton"><div class="spop"><span onclick="checkAnswer(this)" data-opt="0"></span></div><div class="description">i<span class="tooltip-box"></span></div></div>
+            <div class="opbutton"><div class="spop"><span onclick="checkAnswer(this)" data-opt="1"></span></div><div class="description">i<span class="tooltip-box"></span></div></div>
+            <div class="opbutton"><div class="spop"><span onclick="checkAnswer(this)" data-opt="2"></span></div><div class="description">i<span class="tooltip-box"></span></div></span></div>
+            <div class="opbutton"><div class="spop"><span onclick="checkAnswer(this)" data-opt="3"></span></div><div class="description">i<span class="tooltip-box"></span></div></span></div>
+        </div>
+       
+        <div class="footer">
+            
+            <button onclick="showBack()" id="bck" style="display: none;" >Limpiar  <img src="/static/Images/Back.png"></button>
+            <button onclick="showNex()" id="ntx" style="display: none;" > Siguiente  <img src="/static/Images/Next.png"></button>
+            <button id="Res" onclick="Txt()" style="display: none;" > Paso 2 </button>
+            <!-- <button onclick="Backback()" id="Bbck" style="display: none;" >Atrás</button> -->
+        </div>
+    </div>
+    <div id="tank" style="display:none;"><h1>Gracias por completar tu prueba</h1></div>
+    <div class="respues"id="resutScreen"style="display: none;">
+        
+        <div class="boxres" ><h2>Patrón de comportamiento</h2>
+            <canvas id="modelsChart"></canvas>
+        </div>
+        <div class="boxres2">
+            <nav class="barpur"><h1>Resultados</h1></nav>
+            <div id="borde">
+            <div class="disc"> Dominancia <span></span></div>
+            <div class="disc"> Influencia <span></span></div>
+            <div class="disc"> Estabilidad <span></span></div>
+            <div class="disc"> Cumplimiento <span></span></div>
+            <canvas id="modelsDISC"></canvas>
+        </div>
+        </div>
+    </div>
+    <div class="info" id="prof" style="display: none;">
+        <div class="title">
+            Sus características
+        </div>
+        <div class="Profile"><span></span></div>
+        <div class="Patron"><span></span></div>
+        <div class="FH"><span></span></div>
+        <div class="AD"><span></span></div>
+    </div>  
+    
+    <div class="boxtext" id="TextScreen"style="display: none;">
+        <div class="title">
+            Autodescripción
+        </div>
+        <div class="header">
+            <div class="scoreBox">Último paso</div>
+            <div class="timerBox">Tiempo <span>0 : 0 </span></div>
+        </div>
+        <div class="questionBox">Describa brevemente lo que usted considere sus fortalezas y debilidades cuando se encuentra en el trabajo.<br>
+            <div class="Example">¿No sabés qué escribir? Ejemplo <div class="description">i<span class="tooltip-box"><span></span>Eejemplo: </span></div></div>
+        </div>
+        <from id="TextUser">
+            <textarea id="UserTXT"placeholder="Escriba aquí sus respuestas....."></textarea>
+        </from>
+        <div class="footer">
+            <button onclick="activar()" id="enviar"> Enviar los resultados <img src="/static/Images/Next.png"></button>
+        </div>
+    </div>
+    
+    
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/static/Test/Data/DISC.js"></script>
+<script src="/static/Test/Data/Profiles.js"></script>
+<script src="/static/Test/script.js"></script>
+<script src="/static/index.js"></script>
+
+</body>
+
+
+</html>

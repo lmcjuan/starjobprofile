@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Titillium Web', sans-serif;
+    background-image: url(/static/Images/BackGround.png);
+    background-position: top center;
+    background-color: #e8f3ff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+nav
+{
+    width: 100%; /*# El ancho de la barra sea 100% #*/
+    margin: 0;
+    align-items: center;
+}
+nav ul /*# modifica la barra de herramientas#*/
+{
+    background-color: white;
+    overflow: hidden; /*# desbordamiento oculto, sirve para que cuendo usemos una pagina web en un celular no se tenga que dezplazar de un lado a otro #*/
+    margin: 0;
+    padding: 10px 0px 10px 15px;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid rgb(128, 127, 127);
+    color: rgb(78, 76, 76);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 1);
+    
+}
+.log_in
+{
+    display: flex;
+    text-decoration: none;/*# Elimina lo subrayado #*/
+ /*# Para que el texto simepre sea de 16px #*/
+    text-align: center; /*# El texto se alinea al centro #*/
+    padding: 7px;/*# Relleno al rededor del texto #*/
+    /*text-transform: uppercase; # Hace el texto en mayusculas #*/
+    color: white;
+    border-radius: 18px 0 0 18px;
+    margin-top: 0.5%;
+    float: right;
+    background-image: linear-gradient(to right, #e131d4 , #4728a4);
+    width: 120px;
+}
+.log_in:hover 
+{
+    background-image: linear-gradient(to right,#4728a4, #e131d4);
+}
+.log_in img
+{
+    width: 25%;
+    height: 25%;
+}
+nav ul.topnav li /*# Modifica el contenido de la lista #*/
+{
+    display: grid;
+    float: left;
+    list-style: none;
+    margin-left: 3%; /*# Quita el estilo de lista #*/
+    /*# Hace flotar los elementos a la izquierda #*/
+}
+
+ul.topnav li a
+{
+    display: block;
+    align-items: center;
+    margin-left:20px;
+    text-decoration: none;/*# Elimina lo subrayado #*/
+    min-height: 16px; /*# Para que el texto simepre sea de 16px #*/
+    text-align: center; /*# El texto se alinea al centro #*/
+    padding: 14px;/*# Relleno al rededor del texto #*/
+    /*text-transform: uppercase; # Hace el texto en mayusculas #*/
+    color: #444;
+    
+    
+}
+ul.topnav li a:hover /*# Cambia los colores de la barra al pasar el cursor del mouse #*/
+{
+  background-color: darkturquoise; /*# Fondo #*/
+  color: darkslategrey;/*# Texto #*/
+  height: 100%;
+  border-radius: 10px;
+} 
+
+ul.topnav li.dropdownIcon
+{
+ display: none; /*#Elimina el menu de hamb#*/
+    
+}
+nav .topnav img
+{
+    float: left;
+    margin-right: 20%;
+}
+.container
+{
+    width: 100%;
+    padding: 5px 90px;
+    display: flex;
+    margin: auto; 
+    
+}
+
+
+.container a:hover /*# Cambia los colores de la barra al pasar el cursor del mouse #*/
+{
+    background-image: none; /*# Fondo #*/
+  color: rgb(3, 3, 3);/*# Texto #*/
+  border: 4px solid #863deb;
+} 
+
+
+
+/*####################################### Dispositivos mobiles ###########################################*/
+
+@media screen and (max-width: 860px)
+{
+ul.topnav li:not(:nth-child(1))/*#Excluye al elemento home que es el 1 de la lista :not(:nth-child(1))#*/
+{
+    display: none;/*#Elimina los elementos de la barra#*/
+}
+ul.topnav li.dropdownIcon
+{
+    display: block;/*# Muestra el menu de hamb #*/
+    float:right;
+}
+ul.topnav.responsive li.dropdownIcon 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+        
+}
+ul.topnav.responsive
+{
+    position: relative; /*# Para que los elementos permanescan #*/
+}
+ul.topnav.responsive img 
+{
+    display: inline;
+    float: none;
+}
+
+ul.topnav.responsive li
+{
+    display: inline;
+    float: none;
+}
+    
+ul.topnav.responsive li a 
+{
+    display: block;
+    text-align: left;
+    margin-left: 1%;
+}
+article p 
+{
+    font-size: 25px;
+}
+body{
+background-image: url(/static/Images/movil.png);
+}
+img
+{
+    float: left;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+.container
+{
+    width: 100%;
+    display: block;
+         
+}
+
+.log_in
+{
+    padding: 0;
+    margin-top: 3px;
+    border-radius: 32px 0 0 32px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    font-size: 0;
+}
+
+.log_in img
+{
+    width: 80%;
+    height:80%;
+}
+
+.container a:hover /*# Cambia los colores de la barra al pasar el cursor del mouse #*/
+{
+  background-color: #e8f3ff; /*# Fondo #*/
+  color: darkslategrey;/*# Texto #*/
+  border: 2px solid #863deb;
+} 
+}
