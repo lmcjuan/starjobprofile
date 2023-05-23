@@ -9,15 +9,15 @@ let Perfiles=[
      {
     Id:1,
     Tipo: "D/S",
-    Patron:"AUTO-MOTIVACIÓN",
-    Detalles: "Aún en situaciones antagonistas o de resistencia, existe la necesidad de obtener resultados medibles y tangibles. Existe presión para enfrentarse y solucionar problemas en un ambienteplagado de variedad de situaciones.",
+    Patron:"AUTOMOTIVACIÓN",
+    Detalles: "Aún en situaciones antagonistas o de resistencia, existe la necesidad de obtener resultados medibles y tangibles. Existe presión para enfrentarse y solucionar problemas en un ambiente plagado de variedad de situaciones.",
     Ac:"Responde rápidamente a los retos, demuestra movilidad y flexibilidad en sus enfoques, tiende a ser iniciador y versátil respondiendo rápidamente a la competencia.",
     },
     {
     Id:2,
     Tipo: "D/C",
     Patron: "INDIVIDUALIDAD",
-    Detalles:"Las situaciones antagonistas requieren de la actuación directa y positiva en campos donde exista poco o ningún precedente por el cual guiarse. El trabajo lleva implícita una gran libertad de actuación y la autoridad para tomar decisiones aún cuando sean impopulares.",
+    Detalles:"Las situaciones antagonistas requieren de la actuación directa y positiva en campos donde exista poco o ningún precedente por el cual guiarse. El trabajo lleva implícita una gran libertad de actuación y la autoridad para tomar decisiones aun cuando sean impopulares.",
     Ac:"Actúa de una manera directa y positiva ante la oposición. Es una persona fuerte que toma una posición y lucha por mantenerla. Está dispuesto a tomar riesgos y puede aún ignorar niveles jerárquicos.",
     },
     {
@@ -37,9 +37,9 @@ let Perfiles=[
     {
     Id:5,
     Tipo: "I/C",
-    Patron: "CONFIANZA EN SI MISMO",
+    Patron: "CONFIANZA EN SÍ MISMO",
     Detalles: "En los contactos con la gente que requiere de la motivación y la influencia en situaciones en las que existe poco protocolo o precedentes que sirvan como guía. Debe ser capaz de manejar por si mismo cualquier situación en la que exista contacto con la gente.",
-    Ac:"Despliega confianza en si mismo en la mayoría de sus tratos con otras personas. Aunque siempre lucha por ganarse a la gente, se muestra reacio a ceder su propio punto de vista. Esta persona siente que no importa que situación se presente, el será capaz de actuar en forma exitosa.",
+    Ac:"Despliega confianza en sí mismo en la mayoría de sus tratos con otras personas. Aunque siempre lucha por ganarse a la gente, se muestra reacio a ceder su propio punto de vista. Esta persona siente que no importa qué situación se presente, el será capaz de actuar en forma exitosa.",
     },
     {
     Id:6,
@@ -73,7 +73,7 @@ let Perfiles=[
     Id:10,
     Tipo: "C/I",
     Patron: "PERFECCIONISMO",
-    Detalles: "El trabajo requiere el evitar situaciones problemáticas con cosas. La atención al detalle y la precisión son necesarias para asegurar que los estándares se cumplan precisamente y sin error. El uso de fórmulas, la recopilación de información y la inspección de acuerdo a especificaciones, son funciones propias de este tipo de trabajo.",
+    Detalles: "El trabajo requiere el evitar situaciones problemáticas con cosas. La atención al detalle y la precisión son necesarias para asegurar que los estándares se cumplan precisamente y sin error. El uso de fórmulas, la recopilación de información y la inspección de acuerdo con especificaciones, son funciones propias de este tipo de trabajo.",
     Ac:"Esta persona tiende a ser un seguidor apegado del orden y los sistemas. Toma decisiones basadas en hechos y procedimientos conocidos. En todas sus actividades trata meticulosamente de apegarse a los estándares establecidos, ya sea por sí mismo o por los demás.",
     },
     {
@@ -88,8 +88,8 @@ let Perfiles=[
     Id:12,
     Tipo: "DC/IS",
     Patron: "AMBIVALENCIA",
-    Detalles: "Este trabajo, implica el hacer proposiciones de selección a problemas, analizando los pros y los contras de cualquier situación. Puede requerir al checar y rechecar la acción final elaborando un balance en el que aparezcan las ventajas y desventajas. En el trabajo no tiene autoridad para implementar las acciones.",
-    Ac:"Ya que este individuo busca igualdad entre la fuerza para obtener resultados y la calidad de los mismos, es visto con frecuencia como un perfeccionista. No busca “una respuesta” a los problemas sino que desean alcanzar “la mejor respuesta”. Podría sin embargo indicar, que el individuo tiene dificultad en tomar la mayoría de sus decisiones. Los signos extremos de esta situación son la tención y la vacilación.",
+    Detalles: "Este trabajo, implica el hacer proposiciones de selección a problemas, analizando los pros y los contras de cualquier situación. Puede requerir al checar y vuelve a revisar la acción final elaborando un balance en el que aparezcan las ventajas y desventajas. En el trabajo no tiene autoridad para implementar las acciones.",
+    Ac:"Ya que este individuo busca igualdad entre la fuerza para obtener resultados y la calidad de estos, es visto con frecuencia como un perfeccionista. No busca “una respuesta” a los problemas, sino que desean alcanzar “la mejor respuesta”. Podría sin embargo indicar, que el individuo tiene dificultad en tomar la mayoría de sus decisiones. Los signos extremos de esta situación son la tensión y la vacilación.",
     },
     {
     Id:13,
@@ -101,7 +101,7 @@ let Perfiles=[
     {
     Id:14,
     Tipo: "Perfil especial",
-    Patron: "Gracias por respoder el cuestionario",
+    Patron: "Gracias por responder el cuestionario",
     Detalles: "De momento este modelo no puede predecir tu comportamiento",
     Ac:"Este tipo de personas se encuentran en x",
     },

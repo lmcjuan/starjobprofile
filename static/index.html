@@ -9,13 +9,14 @@
     <body>
         <nav>
             <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
-                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="77px" height="53">
+                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="100px" height="53">
 
-                <li><a href="/">Inicio</a> <!-- a etiqueta de anclaje--></li>
-                <li><a href="#CBeta">Contacto</a></li>
-                <li><a href="#AbautBeta">Acerca de</a></li>
+                <li><a href="/">INICIO</a> <!-- a etiqueta de anclaje--></li>
+                <li><a href="/api/Candidatos">CANDIDATOS</a></li>
+                <li><a href="#CBeta">CONTACTO</a></li>
+                <li><a href="#AbautBeta">ACERCA DE</a></li>
                 <!-- Elementos alineados a la derecha -->
-                <a href="#LoginBeta"><div class="log_in"><img src="/static/Images/ico-usr.png">Iniciar</div></a>
+                <a href="/login"><div class="log_in"><img src="/static/Images/ico-usr.png">INICIAR</div></a>
                 <li class="dropdownIcon">
                     <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
                 </li>
@@ -23,10 +24,11 @@
         </nav>
             <div class="container" id="star" >
             <div class="rightSide">
-                <h3>Star Job Profile</h3>
-                <h1>Prueba DISC en línea</h1>
-                <h2>Conoce tu perfil laboral</h2>
-                <a onclick="ShowSteps()">Comenzar prueba DISC</a>
+                
+                <h3>Prueba DISC <span class="multiText"></span></h3>
+                <h1>STAR JOB PROFILE</h1>
+                <h4>Conoce tu perfil laboral y postúlate para una vacante de empleo, puedes hacer la prueba tradicional o utilizar el método de clasificación utilizando Machine Learning.</h4>
+                <a onclick="ShowSteps()">DISC Clásico</a><a href="/api/Candidatos">Postúlate</a>
             </div>
             <div class="leftSide"><img src="/static/Images/image.png"></div>
             </div>
@@ -58,7 +60,17 @@
                 <br><br><br>
                 <div class="iniciar" id="buttons" style="display: none;"><a onclick="Back()">En otro momento</a> <a href="/Test/">Comenzar ahora</a> </div>
             </div>
-            
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect=new Typed(".multiText",
+{
+    strings: ["en línea","Clásica","+ Machine Learning"],
+    loop: true,
+    typeSpeed:100,
+    backSpeed:80,
+    backDelay:1500
+})
+    </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/static/index.js"></script>
     </body>

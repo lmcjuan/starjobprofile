@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarJobProfile</title>
+    <link rel="stylesheet" href="/static//Users/styles.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="100px" height="53">
+                <li><a href="/">INICIO</a> <!-- a etiqueta de anclaje--></li>
+                <li><a href="/api/Candidatos">CANDIDATOS</a></li>
+                <li><a href="#CBeta">CONTACTO</a></li>
+                <li><a href="#AbautBeta">ACERCA DE</a></li>
+                <!-- Elementos alineados a la derecha -->
+                
+                <li class="dropdownIcon">
+                    <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+                </li>
+           </ul>
+        </nav>
+        
+            <div class="box" id="iniciar">
+                    <h2>Ingrese sus credenciales</h2>
+                    <form id="userForm" action="/login" method="POST" >
+                        <label for="Nombre de Usuario">Usuario </label>
+                        <input type="text"
+                        name="Username"
+                        placeholder="Escribe aquí.."
+                        required
+                        clas="inputU"
+                        >
+                        <label for="Contraseña">Contraseña </label>
+                        <input type="password"
+                        name="Key"
+                        placeholder="Escribe aquí.."
+                        required
+                        clas="inputU"
+                        >
+                        <button class="Save">Iniciar</button>
+                    </form>
+                    <span>{% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                            <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        <span id="Help">
+                            ¿Necesitas ayuda? contacta al departamento de IT. Ext:5501
+                        </span>
+                        {% endif %}
+                        {% endwith %}
+                        
+                    </span >
+                    
+            </div>
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="/static/index.js"></script>
+    <script src="/static/Users/Usr.js"></script>
+    </body>
+</html>

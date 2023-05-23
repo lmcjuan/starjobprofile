@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarJobProfile</title>
+    <link rel="stylesheet" href="/static/Puestos/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="100px" height="53">
+                <li><div class="User_name">
+                    {%block body%}
+                    <h1>Bienvenido, {{current_user.name}} {{current_user.last_name}}</h1>
+                    {%endblock%}
+                </div></li>
+                <!-- Elementos alineados a la derecha -->
+                <a href="/api/Logout"><div class="log_in"><img src="/static/Images/ico-usr.png">CERRAR</div></a>
+                <li class="dropdownIcon">
+                    <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+                </li>
+           </ul>
+        </nav>
+        
+       
+        
+            <div class="container">
+                <a class="rightSide" href="/static/Puestos/Nueva_vacante.html">Nueva vacante <img src="/static/Images/Blog-post-Cinco-medidas-para-mantener-un-alto-compromiso-1.webp"></a>
+                <a class="medio" href="/static/Puestos/Jobs.html">Lista de candidatos <img src="/static/Images/Candidatos.jpg"></a>
+                <a class="leftSide" href="/static/Puestos/Lista-vacantes.html">Lista de vacantes<img src="/static/Images/como empezar a buscar trabajo.jpg"></a>
+            </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <script src="/static/index.js"></script>
+    </body>
+</html>
+
+

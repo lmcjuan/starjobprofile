@@ -1,1 +1,1 @@
-web: gunicorn JobProAPP:app
+web: gunicorn app:app

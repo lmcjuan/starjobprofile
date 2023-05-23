@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarJobProfile</title>
+    <link rel="stylesheet" href="/static/SVM/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+            <img src="/static/Images/logo.png" style="margin-left: 80px;" width="100px" height="53">
+            <li><a href="/">INICIO</a> <!-- a etiqueta de anclaje--></li>
+                <li><a href="/api/Candidatos">CANDIDATOS</a></li>
+                <li><a href="#CBeta">CONTACTO</a></li>
+                <li><a href="#AbautBeta">ACERCA DE</a></li>
+                <!-- Elementos alineados a la derecha -->
+                <a href="/login"><div class="log_in"><img src="/static/Images/ico-usr.png">INICIAR</div></a>
+            <li class="dropdownIcon">
+                <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+            </li>
+       </ul>
+    </nav>
+    <div class="box" id="iniciar">
+        <h2 id="Regs">Registro</h2>
+        <form id="userForm">
+            <label for="Nombre de Usuario">Nombre </label>
+            <input type="text"
+            name="Username"
+            placeholder="Nombre y un apellido aquí.."
+            required
+            clas="inputU"
+            >
+            <label for="Correo">Correo de contacto </label>
+            <input type="email"
+            name="email"
+            placeholder="pepe123@dominio.com"
+            required
+            clas="inputU"
+            >
+            <label for="Puesto">Puesto solicitado </label>
+            <input type="text"
+            name="Puesto"
+            placeholder="Escribe aquí.."
+            required
+            clas="inputU"
+            >
+            <label for="number">No.Celular </label>
+            <input type="tel"
+            name="number"
+            placeholder="6561234567"
+            required
+            clas="inputU"
+            
+            >
+            <label for="number">Experiencia laboral </label>
+            <textarea id="ExpTXT"placeholder="Escriba aquí su experiencia en anteriores trabajos....."></textarea>
+            <button class="Next">Siguiente<img src="/static/Images/Next.png"></button>
+        </form>
+        <span></span>
+    </div>
+    <div class="boxtext" id="TextScreen" style="display: none;" >
+        <div class="title">
+            Autodescripción
+        </div>
+        <div class="questionBox">Describa brevemente lo que usted considere sus fortalezas y debilidades cuando se encuentra en el trabajo.<br>
+            
+        </div>
+        <from id="TextUser">
+            <textarea id="UserTXT"placeholder="Escriba aquí sus respuestas....."></textarea>
+        </from>
+        <div class="footer">
+            <button onclick="Enviar()" id="enviar"> Enviar los resultados <img src="/static/Images/Next.png"></button>
+        </div>
+    </div>
+    <div id="tank" style="display:none;"><h1>Gracias por completar tu prueba</h1></div>
+    <div class="respues"id="resutScreen"style="display: none;">
+        
+        <div class="boxres" ><h2>Patrón de comportamiento</h2>
+            <canvas id="modelsChart"></canvas>
+        </div>
+        <div class="boxres2">
+            <nav class="barpur"><h1>Resultados</h1></nav>
+            <div id="borde">
+            <div class="disc"> Dominancia <span></span></div>
+            <div class="disc"> Influencia <span></span></div>
+            <div class="disc"> Estabilidad <span></span></div>
+            <div class="disc"> Cumplimiento <span></span></div>
+            <canvas id="modelsDISC"></canvas>
+        </div>
+        </div>
+    </div>
+    <div class="info" id="prof" style="display: none;">
+        <div class="title">
+            Sus características
+        </div>
+        <div class="Profile"><span></span></div>
+        <div class="Patron"><span></span></div>
+        <div class="FH"><span></span></div>
+        <div class="AD"><span></span></div>
+    </div>  
+    
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/static/Test/Data/DISC.js"></script>
+<script src="/static/Test/Data/Profiles.js"></script>
+<script src="/static/SVM/script.js"></script>
+<script src="/static/index.js"></script>
+
+</body>
+
+
+</html>

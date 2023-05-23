@@ -286,21 +286,6 @@ function Profile ()
     /// Acomodar el patron ejemplo D/C
     let arriba=[];
     let abajo=[];
-    if(mayor == r[0].val[0])
-    {
-        if(r[0].val[3] == r[0].val[0])
-        {
-            return "DC/IS";
-        }
-    }
-    if(menor == r[0].val[0])
-    {
-        if(r[0].val[3] == r[0].val[0])
-        {
-            return "IS/DC";
-        }
-    }
-    
     for(let j=0;j<4;j++)
     {
         
@@ -322,14 +307,14 @@ function Profile ()
 }
 function printprofile(l)
 {
-    for(let v=0;v<14;v++)
+    for(let v=0;v<12;v++)
     {
         if(l==Perfiles[v].Tipo)
         {
             return v;
         }
     }
-    return 14;
+    return 12;
 
 }
 

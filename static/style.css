@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -34,12 +36,14 @@ nav ul /*# modifica la barra de herramientas#*/
     border-radius: 25px 25px 0 0;
     border: 1px solid rgb(128, 127, 127);
     color: rgb(78, 76, 76);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 10px 0 rgb(32, 32, 32);
     
 }
 .log_in
 {
     display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
     text-decoration: none;/*# Elimina lo subrayado #*/
  /*# Para que el texto simepre sea de 16px #*/
     text-align: center; /*# El texto se alinea al centro #*/
@@ -48,6 +52,7 @@ nav ul /*# modifica la barra de herramientas#*/
     color: white;
     border-radius: 18px 0 0 18px;
     margin-top: 0.5%;
+    align-items: center;
     float: right;
     background-image: linear-gradient(to right, #e131d4 , #4728a4);
     width: 120px;
@@ -73,14 +78,17 @@ nav ul.topnav li /*# Modifica el contenido de la lista #*/
 ul.topnav li a
 {
     display: block;
+    font-family: 'Open Sans', sans-serif;
     align-items: center;
-    margin-left:20px;
+    font-size: 13px;
+    margin: auto;
     text-decoration: none;/*# Elimina lo subrayado #*/
     min-height: 16px; /*# Para que el texto simepre sea de 16px #*/
     text-align: center; /*# El texto se alinea al centro #*/
-    padding: 14px;/*# Relleno al rededor del texto #*/
+    padding: 18px;/*# Relleno al rededor del texto #*/
     /*text-transform: uppercase; # Hace el texto en mayusculas #*/
-    color: #444;
+    color: #263aed;
+    
     
     
 }
@@ -114,46 +122,62 @@ nav .topnav img
 .rightSide
 {
     width: 50%;
-    margin-left: 120px;
+    
     padding: 40px 40px;
 }
 .leftSide
 {
     width: 50%;
+
+    margin: auto;
 }
 .rightSide h1
 {
-    color: #444;
-    font-size: 32px;
+    
+    font-family: 'Montserrat', sans-serif;;
+    color: #263aed;
+    font-size: 60px;
+    text-shadow: 1px 2px 5px rgb(168, 168, 168);
+    
 
 }
-.rightSide h2
+.rightSide h4
 {
-    color: #444;
-    font-size: 25px;
+    color: #7c8085;
     margin: 20px auto 10px;
 }
 .rightSide h3
 {
-    color: #863deb;
+    font-family: 'Open Sans', sans-serif;
+    color: #4728a4;
     font-size: 20px;
     margin: 20px auto 10px;   
 }
+.multiText
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #0a0125;
+    font-size: 20px;
+    margin: 20px auto 10px;  
+}
 .rightSide a
 {
-    background-image: linear-gradient(to right,#5803da, #d8439d);
+    background-color: #863deb;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 100px;
     color: #fff;
-    width: 50%;
+    width: 170px;
     font-size: 20px;
     display: inline-block;
     text-align: center;
     padding: 10px;
-    margin-top: 30%;
+    cursor: pointer;
+    margin: 25px;
+    margin-top: 20%;
     text-decoration: none;
     outline: none;
-    border: 4px solid #444;
-    box-shadow: 0 3px 10px 3px rgba(134, 61, 235, 1);
+    border: 4px solid #863deb;
+    box-shadow: 0 3px 4px 3px rgb(119, 48, 219);
     
 }
 
@@ -166,9 +190,10 @@ nav .topnav img
 }
 .container a:hover /*# Cambia los colores de la barra al pasar el cursor del mouse #*/
 {
-    background-image: none; /*# Fondo #*/
-  color: rgb(3, 3, 3);/*# Texto #*/
+    background-color: #e8f3ff; /*# Fondo #*/
+  color: #863deb;/*# Texto #*/
   border: 4px solid #863deb;
+  box-shadow: 0 .4px 9px .4px rgb(119, 48, 219);
 } 
 
 .starsteps
@@ -187,6 +212,8 @@ nav .topnav img
 }
 .starsteps h1,.starsteps h2
 {
+    font-family: 'Montserrat', sans-serif;
+    color: #263aed;
     text-align: center;
     padding: 15px;
 }
@@ -328,8 +355,9 @@ img
 }
 .rightSide h1
 {
-    color: #444;
-    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #263aed;
+    font-size: 60px;
 }
 .rightSide h2
 {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobProfile</title>
+    <link rel="stylesheet" href="/static/Traslate/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+            <img src="/static/Images/logo.png" style="margin-left: 80px;" width="77px" height="53">
+            <li><a href="/">Inicio</a> <!-- a etiqueta de anclaje--></li>
+            <li><a href="#CBeta">Contacto</a></li>
+            <li><a href="#AbautBeta">Acerca de</a></li>
+            <!-- Elementos alineados a la derecha -->
+            <a href="#LoginBeta"><div class="log_in"><img src="/static/Images/ico-usr.png">Iniciar</div></a>
+            <li class="dropdownIcon">
+                <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+            </li>
+       </ul>
+    </nav>
+     <div class="box" id="questionScreen">
+        <div class="title">
+            Traductor de datos
+        </div>
+        <div class="header">
+            <div class="scoreBox">Texto <span></span></div>
+            <div class="timerBox"><span>Conectando...</span></div>
+        </div>
+        
+        <div class="optionBox">
+            <div class="opbutton"><span></span></div>
+            Traducción
+            <div class="opbutton"><span></span></div>
+            Perfil
+            <div class="opbutton"><span></span></div>
+           
+        </div>
+       
+        <div class="footer">
+            
+            <button onclick="showBack()" id="bck" style="display: none;" >Limpiar  <img src="/static/Images/Back.png"></button>
+            <button onclick="showNex()" id="ntx" style="display: none;" > Siguiente  <img src="/static/Images/Next.png"></button>
+            <button id="Res" onclick="Txt()" style="display: none;" > Paso 2 </button>
+            <!-- <button onclick="Backback()" id="Bbck" style="display: none;" >Atrás</button> -->
+        </div>
+    </div>
+    <div id="tank" style="display:none;"><h1>Se etiquetaron todos los datos / tal vez ocurrio un error </h1></div>
+   
+   
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/static/Test/Data/DISC.js"></script>
+<script src="/static/Test/Data/Profiles.js"></script>
+<script src="/static/Traslate/script.js"></script>
+<script src="/static/index.js"></script>
+
+</body>
+
+
+</html>

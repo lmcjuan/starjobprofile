@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarJobProfile</title>
+    <link rel="stylesheet" href="/static/Users/styles.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick"> <!-- ul/li lista desordenada alineada a la izquierda-->
+                <img src="/static/Images/logo.png" style="margin-left: 80px;" width="100px" height="53">
+                <li><a href="/Dashboard">PRINCIPAL</a> <!-- a etiqueta de anclaje--></li>
+                <li><a href="/api/Candidatos">MI PERFIL</a></li>
+                <li class="search"><div class="input"><input id="busqueda" type="text"placeholder="Búsqueda por nombre, perfil" id="mysearch"></div><div class="icon"><img id="Lupa"src="/static/Images/Lupa.png"></div></li>
+                <!-- Elementos alineados a la derecha -->
+                <a href="/login"><div class="log_in"><img src="/static/Images/ico-usr.png">CERRAR</div></a>
+                <li class="dropdownIcon">
+                    <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a><!--Bonton menu -->
+                </li>
+           </ul>
+        </nav>
+        
+            <div class="box_user" id="candidatos">
+                <h1>Vacantes disponibles</h1>
+                <span id="alerta"></span>
+                <ul id="Vacan-List" class="list-group"></ul>
+            </div>
+            
+        <div class="Detalles" id="prf" style="display: none;">
+            
+            <h1>Vacante</h1>
+            <div class="UserDetalles">
+            <div class="data-user">
+                <h1><span id="vacante"></span></h1>
+                <br>
+                <h2>Experiencia</h2>
+                <span id="Experiencia"></span>
+                <h2>Escolaridad</h2>
+                <span id="Escolaridad"></span>
+            </div>
+            <div id="habilidades">
+                <h3>Habilidades blandas</h3>
+                <h3><span id="Perfil"></span></h3>
+                <div class="spop"><span></span></div>
+                <div class="spop"><span></span></div>
+                <div class="spop"><span></span></div>
+                <div class="spop"><span></span></div>
+            </div>
+                <div class="UserTxt">
+                <h2>Detalles</h2>
+                <ul id="DetaList" class="list-dt"></ul>
+            </div>
+            </div>
+            <div class="box_user1" id="candidatos">
+                <h1>Candidatos del mismo perfil</h1>
+                <ul id="userList" class="list-group"></ul>
+                <span id="alerta"></span>
+            </div>
+            </div>
+        
+            <div class="Detalles" id="prfi" style="display: none;">
+                
+                <h1>Detalles del aspirante</h1>
+                <div class="UserDetalles">
+                <div class="data-user">
+                    
+                    <span id="name"></span>
+                    <h2>Puesto solicitado</h2>
+                <span id="puesto"></span>
+                <h2>Contacto</h2>
+                <span id="email"></span>
+                <span id="phonNum"></span>
+                <div class="Exp">
+                    <h2>Experiencia</h2>
+                    <span></span>
+                </div>
+                </div>
+                    <div class="UserTxt">
+                    <h2>Texto analizado</h2>
+                    <span id="TexAn"></span>
+                </div>
+                </div>
+                <br>
+                <h1>Detalles DISC</h1>
+                <div class="DetallesDISC">
+                    <div id="chart-container"></div>
+                <div class="GraphDISC">
+                       <h3>Probabilidad</h3>
+                    <div id="chart1"></div>
+                    <h3><span id="Perfil"></span></h3>
+                </div>
+                <div class="InfoDISC">
+                    <h2><span id="Nperf"></span></h2>
+                    <h3><span id="PerfilDescrip"></span></h3>
+                </div>
+                </div>
+                </div>
+                <div class="footer">
+                    <button  id="ntx" onclick="Back()"style="display: none;"><img src="/static/Images/BK.png"></button>
+                </div>
+                
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <script src="/static/index.js"></script>
+    <script src="/static/Puestos/Vacantes.js"></script>
+    <script src="/static/Users/graph.js"></script>
+    <script src="/static/Test/Data/habilidades.js"></script>
+    <script src="/static/Users/Calcular-Perfil.js"></script>
+    <script src="/static/Test/Data/DISC.js"></script>
+    <script src="/static/Test/script.js"></script>
+    <script src="/static/Test/Data/Profiles.js"></script>
+
+    </body>
+</html>
