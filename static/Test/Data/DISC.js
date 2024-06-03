@@ -1,7 +1,7 @@
 let test=[
     {
     question: "Sección 1",
-    option: ["Persuasivo(a)"," Gentil ","Humilde”,” Original",],
+    option: ["Persuasivo(a)"," Gentil ","Humilde","Original",],
     Mas: ["I","S","C","",],
     Menos: ["","-S","-C","-D",],
     desp:["Capaz de llevar a otro a creer o hacer algo","Aquél que en su trato es amable","Que demuestra sencillez y docilidad","Especial, único, distinto a los demás",],

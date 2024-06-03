@@ -1,12 +1,9 @@
-idPersona,Idperfil,Nombre,Puesto,Email,Perfil,Porcentaje,Phone,Exper
-236,2,Juan Lamas,Técnico de pruebas,al158023@alumnos.uacj.mx,D/C,88,656246810,2 años
-214,10,Daniel Pallares,Ingeniero de TI,dani.p11@gmail.com,C/I,97,6561234567,4años
-192,0,Yadira Corrales, Jefe de grupo,y.corrales@live.com.mx,D/I,76,6562387366,10 años
-238,4,Perla Gonzáles,Contador,p.gonz@outlook.es,I/S,28,21334235435,Sin experiencia
-239,7,Karla Méndez,Ingeniera de calidad,karla.mdz11@live.com.mx,S/I,39,32453454767,Sin experiencia
-983,6,Michelle Escobar,Diseñadora,mich.es@gmail.com,S/D,107,65678889999,Sin experiencia laboral.
-984,9,Jorge Arizmendiz,Capturista,Ariz@gmail.com,C/D,295,65634567778,Capturista de nominas
-985,1,Rubén Solórzano,Ing. Sistemas Computacionales,srub@outook.com,D/S,67,656666666123,Experiencia como técnico de reparación.
-986,6,Esmeralda Guzmán,Trabajadora Social,melala@yahoo.com,S/D,107,65655566677788,Super mercado gonzalez
-2551,9,Juan,Técnico,juan@gmail.com,C/D,84,45665465,Sin exp
-2197,8,Mangano,Chofer,mangano@fulano.com,S/C,-40,2353536,Manejando correctamente en todos lados 
+idPersona,Idperfil,Nombre,LastN,Puesto,Email,Perfil,Porcentaje,Phone,Exper
+236,2,Juan,Lamas,Técnico de pruebas,al158023@alumnos.uacj.mx,D/C,88,656246810,2 años
+214,10,Daniel,Pallares,Ingeniero de TI,dani.p11@gmail.com,C/I,97,6561234567,4años
+192,0,Yadira,Corrales, Jefe de grupo,y.corrales@live.com.mx,D/I,76,6562387366,10 años
+238,4,Perla,Gonzáles,Contador,p.gonz@outlook.es,I/S,88,21334235435,Sin experiencia
+239,7,Karla,Méndez,Ingeniera de calidad,karla.mdz11@live.com.mx,S/I,39,32453454767,Sin experiencia
+983,6,Michelle,Escobar,Diseñadora,mich.es@gmail.com,S/D,93,65678889999,Sin experiencia laboral.
+985,1,Rubén,Solórzano,Ing. Sistemas Computacionales,srub@outook.com,D/S,67,656666666123,Experiencia como técnico de reparación.
+986,6,Esmeralda,Guzmán,Trabajadora Social,melala@yahoo.com,S/D,77,65655566677788,Super mercado gonzalez

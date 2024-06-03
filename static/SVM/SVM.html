@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StarJobProfile</title>
     <link rel="stylesheet" href="/static/SVM/style.css">
+
 </head>
 <body>
     <nav>
@@ -22,56 +23,110 @@
        </ul>
     </nav>
     <div class="box" id="iniciar">
-        <h2 id="Regs">Registro</h2>
+        <div class="progress-bar">
+            <div class="step">
+                <p>Información personal</p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check"><img src="/static/icons/check.svg"></div>
+            </div>
+            <div class="step">
+                <p>Información de contacto</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check"><img src="/static/icons/check.svg"></div>
+            </div>
+            <div class="step">
+                <p>Información de empleo</p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check"><img src="/static/icons/check.svg"></div>
+            </div>
+            <div class="step">
+                <p>Autodescripción</p>
+                <br>
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+                <div class="check"><img src="/static/icons/check.svg"></div>
+            </div>
+        </div>
+        <div class="form-outer">
         <form id="userForm">
-            <label for="Nombre de Usuario">Nombre </label>
-            <input type="text"
-            name="Username"
-            placeholder="Nombre y un apellido aquí.."
-            required
-            clas="inputU"
-            >
-            <label for="Correo">Correo de contacto </label>
-            <input type="email"
-            name="email"
-            placeholder="pepe123@dominio.com"
-            required
-            clas="inputU"
-            >
-            <label for="Puesto">Puesto solicitado </label>
-            <input type="text"
-            name="Puesto"
-            placeholder="Escribe aquí.."
-            required
-            clas="inputU"
-            >
-            <label for="number">No.Celular </label>
-            <input type="tel"
-            name="number"
-            placeholder="6561234567"
-            required
-            clas="inputU"
-            
-            >
-            <label for="number">Experiencia laboral </label>
-            <textarea id="ExpTXT"placeholder="Escriba aquí su experiencia en anteriores trabajos....."></textarea>
-            <button class="Next">Siguiente<img src="/static/Images/Next.png"></button>
+            <div class="page" id="slidepage">
+                <div class="title">Información básica </div>
+                    <div class="field">
+                        
+                        <label for="Nombre de Usuario">Nombre </label>
+                        <input type="text" name="Username" placeholder="Escriba su nombre aquí..." required clas="inputU">
+                    </div>
+                    <div class="field">
+                        
+                        <label for="Lastname">Apellidos </label>
+                        <input type="text" name="Lastname" placeholder="Esciba sus apellidos aquí..." required clas="inputU">
+                    </div>
+                    <div class="field nextBtn" id="btn-n-1" style="display: none;">
+                        <button class="Next">Siguiente<img src="/static/icons/arrow-right-circle (1).svg"></button>
+                    </div>
+            </div>
+
+
+            <div class="page"id="slidepage-1"style="display: none;">
+                <div class="title">Información de contacto</div>
+                    <div class="field">
+
+                        <label for="Correo">Correo electrónico </label>
+                        <input type="email" name="email" placeholder="pepe123@dominio.com" required clas="inputU">
+                    </div>
+                    <div class="field">
+                        
+                        <label for="number">Número de celular </label>
+                        <input onkeydown="phoneNumberFormater()" type="tel" name="number" id="number" placeholder="(656)123-4567" required clas="inputU">
+                    </div>
+                    <div class="field-button">
+                        <button class="prev-1 prev"><img src="/static/icons/arrow-left-circle.svg"> Atrás</button>
+                        <button class="next-1 next" id="btn-n-2" style="display: none;">Siguiente <img src="/static/icons/arrow-right-circle (1).svg"></button>
+                    </div>
+            </div>
+
+
+
+            <div class="page"id="slidepage-2"style="display: none;">
+                <div class="title">Información de empleo</div>
+                    <div class="field">
+                    
+                        <label for="Puesto">Puesto solicitado </label>
+                        <input type="text" name="Puesto" placeholder="Escriba el puesto que solicita aquí.." required clas="inputU">
+                    </div>
+                    <div class="field">
+                        
+                        <label for="number">Experiencia laboral </label>
+                        <textarea id="ExpTXT"placeholder="Escriba aquí su experiencia en anteriores trabajos....."></textarea>
+                    </div>
+                    <div class="field-button" >
+                        <button class="prev-2 prev"> <img src="/static/icons/arrow-left-circle.svg"> Atrás </button>
+                        <button class="next-2 next" id="btn-n-3" style="display: none;">Siguiente<img src="/static/icons/arrow-right-circle (1).svg"></button>
+                    </div>
+            </div>
+
+            <div class="page" id="slidepage-3" style="display: none;">
+                <div class="title">Autodescripción</div>
+                    <div class="field">
+                        <div class="questionBox">Describa brevemente lo que usted considere sus fortalezas y debilidades cuando se encuentra en el trabajo.</div>
+                        <textarea id="UserTXT"placeholder="Escriba aquí sus respuestas....."></textarea>
+                    </div>
+                    <div class="field-button" id="btn-n-4">
+                        <button class="prev-3 prev"><img src="/static/icons/arrow-left-circle.svg"> Atrás</button>
+                        <button class="submit prev"onclick="Enviar()" id="enviar"> Enviar los resultados <img src="/static/icons/send.svg"></button>
+                    </div>
+            </div>
+
         </form>
-        <span></span>
     </div>
-    <div class="boxtext" id="TextScreen" style="display: none;" >
-        <div class="title">
-            Autodescripción
-        </div>
-        <div class="questionBox">Describa brevemente lo que usted considere sus fortalezas y debilidades cuando se encuentra en el trabajo.<br>
-            
-        </div>
-        <from id="TextUser">
-            <textarea id="UserTXT"placeholder="Escriba aquí sus respuestas....."></textarea>
-        </from>
-        <div class="footer">
-            <button onclick="Enviar()" id="enviar"> Enviar los resultados <img src="/static/Images/Next.png"></button>
-        </div>
+        <span></span>
     </div>
     <div id="tank" style="display:none;"><h1>Gracias por completar tu prueba</h1></div>
     <div class="respues"id="resutScreen"style="display: none;">

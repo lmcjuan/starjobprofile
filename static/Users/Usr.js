@@ -7,7 +7,10 @@ description.onclick=function(){
  console.log("Instrucciones");
  $(".questionBox").show();
 }
-
+function cerrar()
+{
+    $(".questionBox").hide();
+}
 
 
 

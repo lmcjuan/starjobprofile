@@ -28,51 +28,51 @@
             </div>
             
         <div class="Detalles" id="prf" style="display: none;">
-            
+            <div class="cerrar" onclick="Back()">Cerrar<img src="/static/icons/x.svg"></div>
             <h1>Detalles del aspirante</h1>
             <div class="UserDetalles">
                 
             <div class="data-user">
-                
                 <span id="name"></span>
                 <h2>Puesto solicitado</h2>
                 <span id="puesto"></span>
                 <h2>Contacto</h2>
                 <span id="email"></span>
                 <span id="phonNum"></span>
-                <div class="Exp">
-                    <h2>Experiencia</h2>
-                    <span></span>
-                </div>
             </div>
             <div class="UserTxt">
                 <h2>Texto analizado</h2>
-                <span></span>
+                <span id="UserTxt"></span>
+                <div class="Exp">
+                    <h2>Experiencia</h2>
+                    <span id="Exp"></span>
+                </div>
             </div>
             </div>
             <br>
             <h1>Perfil DISC</h1>
             <div class="DetallesDISC">
-                <div id="chart-container"></div>
             <div class="GraphDISC">
                    <h3>Probabilidad</h3>
                 <div id="chart1"></div>
                 <h3><span id="Perfil"></span></h3>
-
             </div>
             <div class="InfoDISC">
-                <h2><span id="Nperf"></span></h2>
-                <h3><span id="PerfilDescrip"></span></h3>
+                <h3><span id="Nperf"></span></h3>
+                <span id="PerfilDescrip"></span>
             </div>
             </div>
-                
-                
+            <div class="Alto">
+                <div id="chart-container"></div>
+                <span id="Altoen"></span>
             </div>
+            </div>
+            
             
             
         </div>
         <div class="footer">
-            <button  id="ntx" onclick="Back()" style="display: none;"><img src="/static/Images/BK.png"></button>
+            <button  id="ntx" onclick="Back()" style="display: none;"><img src="/static/icons/arrow-left-circle.svg"> Atrás</button>
         </div>
         
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>

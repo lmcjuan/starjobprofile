@@ -48,8 +48,8 @@ function rederUserV(emp)
     <p>${emp[m].P}</p>
     </div>
     <div>
-         <button class="borrar" onclick="borrarV(this,this)" data-opt="${emp[m].idV}"data-objt="${emp}">Borrar</button>
-         <button class="datalles"onclick="detallesV(this,this,this,this,this,this,this,this,this)"data-pst="${emp[m].Puesto}"data-exp="${emp[m].Exp}"data-p="${emp[m].P}"data-d="${emp[m].D}"data-i="${emp[m].I}"data-s="${emp[m].S}"data-c="${emp[m].C}"data-esc="${emp[m].Esc}"data-descpues="${emp[m].DescPues}">Detalles</button>
+         <button class="borrar" onclick="borrarV(this,this)" data-opt="${emp[m].idV}"data-objt="${emp}">Borrar <img src="/static/icons/trash-2 (1).svg"></button>
+         <button class="datalles"onclick="detallesV(this,this,this,this,this,this,this,this,this)"data-pst="${emp[m].Puesto}"data-exp="${emp[m].Exp}"data-p="${emp[m].P}"data-d="${emp[m].D}"data-i="${emp[m].I}"data-s="${emp[m].S}"data-c="${emp[m].C}"data-esc="${emp[m].Esc}"data-descpues="${emp[m].DescPues}">Detalles <img src="/static/icons/eye.svg"></button>
     </div>
     ` 
     VacanList.append(userItem)
@@ -187,7 +187,7 @@ async function detalles(patron,idn,nombre,puesto,email,prc,perfil,phone,Expe)
     console.log(pho);
     console.log(Expi);
     $("#phonNum").text("Cel. "+pho);
-    $(".Exp span").text(Expi);
+    $("#Exp").text(Expi);
     $("#prfi").show();
     $("#Resultado").hide();
     $("#Cerrar").show();
@@ -212,10 +212,11 @@ async function detalles(patron,idn,nombre,puesto,email,prc,perfil,phone,Expe)
         {
             console.log("Texto ingresado por el usuario")
             console.log(user)
-            $("#TexAn").text(user.txt_user);
+            $("#UserTxt").text(user.txt_user);
             $("#Perfil").text(pat);
             $("#Nperf").text(DISC.nombre);
             $("#PerfilDescrip").text(DISC.TextDISC);
+            $("#Altoen").text(DISC.Alto);
             
         }
         

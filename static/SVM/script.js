@@ -28,13 +28,8 @@ $(function()
 const userForm=document.querySelector('#userForm');
 userForm.addEventListener('submit',async e=>{
     e.preventDefault();
-    autodes();
 })
-function autodes()
-{
-    $("#iniciar").hide();
-    $("#TextScreen").show();
-}
+
 
 async function Enviar()
 {
@@ -61,6 +56,7 @@ async function Enviar()
             const Prob=data.prc;
             const perf= data.Tipo;
             const Name_user=userForm['Username'].value;
+            const Last_name=userForm['Lastname'].value;
             const correo=userForm['email'].value;
             const puesto=userForm['Puesto'].value;
             const phone=userForm['number'].value;
@@ -76,6 +72,7 @@ async function Enviar()
                     IDU,
                     Prob,
                     Name_user,
+                    Last_name,
                     correo,
                     perf,
                     puesto,
@@ -170,7 +167,7 @@ async function showResult(num)
     pila[2]=DISC.S
     pila[3]=DISC.C
     printCharts();
-    $("#TextScreen").hide();
+    $("#iniciar").hide();
     $("#resutScreen").show();
     $("#tank").show();
     $("#prof").show();
@@ -183,3 +180,135 @@ async function showResult(num)
     $(".AD span").text(DISC.TextDISC);
 }
 // ##################################funcion para imprimir el cuestionario DISC ################################
+
+
+const slidePage=document.querySelector("#userForm");
+const firtNextBtn=document.querySelector(".nextBtn");
+const prevBtnSec=document.querySelector(".prev-1");
+const nextBtnSec=document.querySelector(".next-1");
+const nextBtnThird=document.querySelector(".next-2");
+const prevBtnThird=document.querySelector(".prev-2");
+const prevBtnFourth=document.querySelector(".prev-3");
+const submitBtn=document.querySelector(".submit");
+const progressText=document.querySelectorAll(".step p");
+const progressCheck=document.querySelectorAll(".step .check");
+const bullet=document.querySelectorAll(".step .bullet");
+
+let max=4;
+let current=1;
+
+
+
+slidePage.addEventListener('mousemove',function(){
+    const Name_user=userForm['Username'].value;
+    if(Name_user.length>=3)
+    {
+        const Last_name=userForm['Lastname'].value;
+        if(Last_name.length>=3)
+        {
+            $("#btn-n-1").show();  
+        }
+    }
+    const correo=userForm['email'].value;
+    if(correo.length>=4)
+    {
+        const phone=userForm['number'].value;
+        if(phone.length>=4)
+        {
+            $("#btn-n-2").show();  
+        }
+    }
+    const puesto=userForm['Puesto'].value;
+    if(puesto.length>=4)
+    {
+        const exper = document.getElementById("ExpTXT").value
+        if(exper.length>=4)
+        {
+            $("#btn-n-3").show();  
+        }
+    }
+})
+firtNextBtn.addEventListener("click",function(){
+    
+    $("#slidepage-1").show();
+    $("#slidepage").hide();
+    bullet[current -1].classList.add("activate");
+    progressText[current -1].classList.add("activate");
+    progressCheck[current -1].classList.add("activate");
+    current+=1;
+});
+
+nextBtnSec.addEventListener("click",function(){
+    
+    $("#slidepage-2").show();
+    $("#slidepage-1").hide();
+    bullet[current -1].classList.add("activate");
+    progressText[current -1].classList.add("activate");
+    progressCheck[current -1].classList.add("activate");
+    current+=1;
+});
+
+nextBtnThird.addEventListener("click",function(){
+    $("#slidepage-3").show();
+    $("#slidepage-2").hide();
+    bullet[current -1].classList.add("activate");
+    progressText[current -1].classList.add("activate");
+    progressCheck[current -1].classList.add("activate");
+    current+=1;
+});
+
+
+prevBtnSec.addEventListener("click",function(){
+    $("#slidepage").show();
+    $("#slidepage-1").hide();
+    bullet[current -2].classList.remove("activate");
+    progressText[current -2].classList.remove("activate");
+    progressCheck[current -2].classList.remove("activate");
+    current-=1;
+});
+
+prevBtnThird.addEventListener("click",function(){
+    $("#slidepage-1").show();
+    $("#slidepage-2").hide();
+    bullet[current -2].classList.remove("activate");
+    progressText[current -2].classList.remove("activate");
+    progressCheck[current -2].classList.remove("activate");
+    current-=1;
+});
+
+prevBtnFourth.addEventListener("click",function(){
+    $("#slidepage-2").show();
+    $("#slidepage-3").hide();
+    bullet[current -2].classList.remove("activate");
+    progressText[current -2].classList.remove("activate");
+    progressCheck[current -2].classList.remove("activate");
+    current-=1;
+});
+
+submitBtn.addEventListener("click",function(){
+    bullet[current -1].classList.add("activate");
+    progressText[current -1].classList.add("activate");
+    progressCheck[current -1].classList.add("activate");
+    current+=1;
+});
+function formatPhoneNumber(value)
+{
+    if(!value) return value;
+    const phoneNumber=value.replace(/[^\d]/g,'');
+    const phoneNumberLength = phoneNumber.length;
+    if(phoneNumberLength < 4) return phoneNumber;
+    if(phoneNumberLength<7)
+    {
+        return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`;
+    }
+    return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(
+        3,
+        6,
+        )}-${phoneNumber.slice(6,9)}`
+}
+function phoneNumberFormater()
+{
+    const inputField = document.getElementById('number');
+    const formattedInputValue = formatPhoneNumber(inputField.value);
+    inputField.value = formattedInputValue;
+}

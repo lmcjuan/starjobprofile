@@ -105,6 +105,7 @@ def savedata():
     dffm=pd.DataFrame(dataf)
     new_user=request.get_json()
     Nombre=new_user['Name_user']
+    Last_name=new_user['Last_name']
     idU=new_user['IDU']
     idP=int(len(dffm))+1
     prcen=new_user['Prob']
@@ -115,7 +116,7 @@ def savedata():
     perf=new_user['perf']
     with open("UserData.csv","a",newline="",encoding='utf-8') as File:
         writer = csv.writer(File)
-        writer.writerow([idP,idU,Nombre,puesto,correo,perf,prcen,phone,exper])
+        writer.writerow([idP,idU,Nombre,Last_name,puesto,correo,perf,prcen,phone,exper])
         File.close()
     print("Success!!")
     return 'Usuario Agregado'
@@ -164,11 +165,12 @@ def Dashboardget():
     #Guarda los datos de cada aspirante en un objeto#
     for h in range(0,len(dfUsr)):
         idpersona = int(dfUsr.loc[h,'idPersona'])
-        nombre = dfUsr.loc[h,'Nombre']
+        nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
+        print(nombre)
         puesto = dfUsr.loc[h,'Puesto']
         email = dfUsr.loc[h,'Email']
         perfil = dfUsr.loc[h,'Perfil']
-        Phone = int(dfUsr.loc[h,'Phone'])
+        Phone = str(dfUsr.loc[h,'Phone'])
         Exper = dfUsr.loc[h,'Exper']
         idperfil = int(dfUsr.loc[h,'Idperfil'])
         porcentaje = int(dfUsr.loc[h,'Porcentaje'])
@@ -214,8 +216,9 @@ def DISC(p):
     I = int(dfdisc.loc[h,'I'])
     S = int(dfdisc.loc[h,'S'])
     C = int(dfdisc.loc[h,'C'])
+    Alto=Patron = dfdisc.loc[h,'Alto']
     #Regresa al frontend los datos correspondientes al perfil#
-    return jsonify({'nombre':nombre,'TextDISC':TextDISC,'Patron':Patron,'D':D,'I':I,'S':S,'C':C})
+    return jsonify({'nombre':nombre,'TextDISC':TextDISC,'Patron':Patron,'D':D,'I':I,'S':S,'C':C,'Alto':Alto})
 
 @app.get('/api/UserTxt/<pe>')
 def Txt_U(pe):
@@ -231,7 +234,8 @@ def Txt_U(pe):
 @app.route('/api/Puestos')
 @login_required
 def Puestos():
-    return render_template('Jobs.html')
+    
+    return send_file("static/Puestos/Jobs.html")
 #Recibe los datos de una nueva vacante#
 @app.post('/api/Vacante')
 def Guaradar_Puestos():
@@ -322,7 +326,7 @@ def Buscar():
         secuencia = r'(?i)\w*'+str(buscar)+'\w*'
         if(buscar==str(dfUsr.loc[h,'idPersona'])):
             idpersona = int(dfUsr.loc[h,'idPersona'])
-            nombre = dfUsr.loc[h,'Nombre']
+            nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
             puesto = dfUsr.loc[h,'Puesto']
             email = dfUsr.loc[h,'Email']
             perfil = dfUsr.loc[h,'Perfil']
@@ -336,7 +340,7 @@ def Buscar():
         if (len(busqueda)!=0):
             print("Busqueda encontro palabras similares "+str(busqueda))
             idpersona = int(dfUsr.loc[h,'idPersona'])
-            nombre = dfUsr.loc[h,'Nombre']
+            nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
             puesto = dfUsr.loc[h,'Puesto']
             email = dfUsr.loc[h,'Email']
             perfil = dfUsr.loc[h,'Perfil']
@@ -348,7 +352,7 @@ def Buscar():
         #Busca por palabras (Puesto)#
         if(buscar==str(dfUsr.loc[h,'Puesto'])):
             idpersona = int(dfUsr.loc[h,'idPersona'])
-            nombre = dfUsr.loc[h,'Nombre']
+            nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
             puesto = dfUsr.loc[h,'Puesto']
             email = dfUsr.loc[h,'Email']
             perfil = dfUsr.loc[h,'Perfil']
@@ -360,7 +364,7 @@ def Buscar():
         #Busca por perfil id#
         if(buscar==str(dfUsr.loc[h,'Idperfil'])):
             idpersona = int(dfUsr.loc[h,'idPersona'])
-            nombre = dfUsr.loc[h,'Nombre']
+            nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
             puesto = dfUsr.loc[h,'Puesto']
             email = dfUsr.loc[h,'Email']
             perfil = dfUsr.loc[h,'Perfil']
@@ -372,7 +376,7 @@ def Buscar():
         #Busca por perfil #
         if(buscar==str(dfUsr.loc[h,'Perfil'])):
             idpersona = int(dfUsr.loc[h,'idPersona'])
-            nombre = dfUsr.loc[h,'Nombre']
+            nombre = ""+str(dfUsr.loc[h,'Nombre'])+" "+str(dfUsr.loc[h,'LastN'])
             puesto = dfUsr.loc[h,'Puesto']
             email = dfUsr.loc[h,'Email']
             perfil = dfUsr.loc[h,'Perfil']

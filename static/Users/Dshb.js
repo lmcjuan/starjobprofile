@@ -46,18 +46,13 @@ function rederUser(users)
     <p>${users[m].puesto}</p>
     </div>
     <div>
-    <h4>Correo</h4>
-    <br>
-    <p>${users[m].email}</p>
-    </div>
-    <div>
     <h4>Perfil DISC</h4>
     <br>
     <p>${users[m].perfil} = ${users[m].porcentaje} %</p>
     </div>
     <div>
-         <button class="borrar" onclick="borrar(this,this)" data-opt="${users[m].idpersona}"data-objt="${users}">Borrar</button>
-         <button class="datalles"onclick="detalles(this,this,this,this,this,this,this,this,this)" data-ppr="${users[m].perfil}"data-idn="${users[m].idpersona}"data-obj="${users[m].nombre}"data-obg="${users[m].email}"data-obh="${users[m].puesto}"data-obb="${users[m].porcentaje}"data-obc="${users[m].idperfil}"data-pho="${users[m].phone}"data-exp="${users[m].Exper}">Resultados</button>
+         <button class="borrar" onclick="borrar(this,this)" data-opt="${users[m].idpersona}"data-objt="${users}">Borrar <img src="/static/icons/trash-2 (1).svg"></button>
+         <button class="datalles"onclick="detalles(this,this,this,this,this,this,this,this,this,this)" data-ppr="${users[m].perfil}"data-idn="${users[m].idpersona}"data-obj="${users[m].nombre}"data-obg="${users[m].email}"data-obh="${users[m].puesto}"data-obb="${users[m].porcentaje}"data-obc="${users[m].idperfil}"data-pho="${users[m].phone}"data-exp="${users[m].Exper}">Resultados <img src="/static/icons/eye.svg"></button>
     </div>
     ` 
     userList.append(userItem)
@@ -128,7 +123,7 @@ async function detalles(patron,idn,nombre,puesto,email,prc,perfil,phone,Expe)
     console.log(pho);
     console.log(Expi);
     $("#phonNum").text("Cel. "+pho);
-    $(".Exp span").text(Expi);
+    $("#Exp").text(Expi);
     $("#candidatos").hide();
     $("#prf").show();
     $("#ntx").show();
@@ -140,10 +135,10 @@ async function detalles(patron,idn,nombre,puesto,email,prc,perfil,phone,Expe)
         {
             console.log("Datos DISC")
             console.log(DISC)
-            D=(DISC.D*prce)/100;
-            I=(DISC.I*prce)/100;
-            S=(DISC.S*prce)/100;
-            C=(DISC.C*prce)/100;
+            D=DISC.D
+            I=DISC.I
+            S=DISC.S
+            C=DISC.C
             initCharts();
             ophabilidades(D,I,S,C);
         }
@@ -153,10 +148,11 @@ async function detalles(patron,idn,nombre,puesto,email,prc,perfil,phone,Expe)
         {
             console.log("Texto ingresado por el usuario")
             console.log(user)
-            $(".UserTxt span").text(user.txt_user);
+            $("#UserTxt").text(user.txt_user);
             $("#Perfil").text(pat);
             $("#Nperf").text(DISC.nombre);
             $("#PerfilDescrip").text(DISC.TextDISC);
+            $("#Altoen").text(DISC.Alto);
             
         }
         

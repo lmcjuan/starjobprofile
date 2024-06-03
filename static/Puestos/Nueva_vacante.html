@@ -28,6 +28,7 @@
             <h1>Formar perfil y habilidades con DISC</h1>
             <div class="Example">¿Necesitas ayuda para crear un perfil?<div class="description" onclick="Instructions()">i<span class="tooltip-box"><span></span>Haz clic para ver las instrucciones</span></div></div>
             <div class="questionBox"  style="display: none;">
+                <div class="cerrar" onclick="cerrar()">Cerrar<img src="/static/icons/x.svg"></div>
                 <h2>Instrucciones</h2>
                 <p>Para crear un nuevo perfil para una vacante de empleo primero, utilice los controles para cada uno de los cuatro factores de DISC ordenados de la siguiente manera; rojo-Dominio identificado con su inicial D, amarillo-Influencia letra I, Verde-Estabilidad letra S y por último azul-Cumplimento letra C.</p>
                 <p>Conforme los controles se ajustan producen una gráfica para orientar a la formación del perfil de comportamiento y a su vez muestran las habilidades del perfil, según sea la forma del patrón que forma la gráfica.</p>
@@ -59,8 +60,8 @@
             <form id="Puesto-Form" action="/api/Vacante" method="POST" >
                 <div class="NPues">
                     <label for="Puesto">Nombre del puesto </label><input type="text" required name="Puesto" placeholder="Ejemplo Calidad">
-                    <label for="Exp">Experiencia </label><input type="text" required name="Exp" placeholder="Años, meses">
-                    <label for="Esc">Escolaridad </label><input type="text" required name="Esc" placeholder="Nivel de estudios">
+                    <label for="Exp">Experiencia requerida</label><input type="text" required name="Exp" placeholder="Años, meses">
+                    <label for="Esc">Escolaridad requerida</label><input type="text" required name="Esc" placeholder="Nivel de estudios">
                 </div>
                 <div class="DescPueto">
                     <label for="DescPues">Descripción</label>
@@ -73,7 +74,7 @@
                 <input name="P" id="Perf" type="text" readonly style="display: none;"required>
                 <div class="footer">
                     <button  id="ntx" onclick="Back()" style="display: none;"> Atrás</button>
-                    <button type="submit" id="Guardar"disabled=""onclick="guardar()" >Guardar</button>
+                    <button type="submit" id="Guardar"disabled=""onclick="guardar()" >Guardar <img src="/static/icons/save.svg"></button>
             </div>
             </form>
             </div>
