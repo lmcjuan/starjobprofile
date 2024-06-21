@@ -1,4 +1,4 @@
-starjobprofile
+# header H1 starjobprofile
 
 
 Esta aplicación web se desarrolló como estrategia para coadyuvar durante el proceso de reclutamiento de nuevo personal en la industria maquiladora. Para ello, se utilizaron herramientas de procesamiento de lenguaje natural, el algoritmo Suppor Vector Machines para clasificar doce tipos de perfil basados en el modelo DISC, a partir de fortalezas y debilidades ingresadas como de entrada desde el Frontend. Los datos textuales utilizados durante el entrenamiento se conforman de tanto de información real como sintética. Sin embargo, los proporcionados por usuarios verdaderos fueron escasos, por lo que se utilizaron fortalezas y debilidades disponibles en el sitio web indiabix. Debido a lo anterior, el rendimiento del clasificador SVM es ligeramente satisfactorio al lograr más del 80 % de precisión y exactitud en algunos de los perfiles.
